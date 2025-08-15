@@ -45,9 +45,10 @@
         "next": "启动_进入主界面"
     },
     "启动_进入主界面": {
-        "next": "通用_确认进入主界面_ColorMatch",
+        "next": "通用_返回主界面_确认进入主界面_TemplateMatch",
         "interrupt": [
             "通用_点击屏幕继续",
+            "通用_庆典奖励领取",
             "启动_每日补给",
             "启动_活动公告",
             "启动_领取活动奖励",
@@ -55,8 +56,41 @@
             "启动_获得新徽章"
         ],
         "timeout": 180000,
-        "rate_limit": 3000,
+        "rate_limit": 4000,
         "on_error": "系统_重启游戏"
+    },
+    "通用_庆典奖励领取": {
+        "recognition": "OCR",
+        "expected": [
+            "可领取"
+        ],
+        "roi": [
+            199,
+            283,
+            904,
+            248
+        ],
+        "pre_wait_freezes": 200,
+        "action": "Click",
+        "post_wait_freezes": 200,
+        "next": [
+            "关闭庆典奖励界面",
+            "通用_庆典奖励领取"
+        ],
+        "interrupt": "通用_点击屏幕继续"
+    },
+    "关闭庆典奖励界面": {
+        "recognition": "TemplateMatch",
+        "template": "启动/庆典奖励领取界面-关闭.png",
+        "roi": [
+            1057,
+            159,
+            93,
+            72
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200,
+        "next": "启动_进入主界面"
     },
     "启动_每日补给": {
         "recognition": "TemplateMatch",

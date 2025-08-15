@@ -15,7 +15,15 @@
             110
         ],
         "action": "Click",
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": {
+            "target": [
+                693,
+                630,
+                520,
+                68
+            ],
+            "time": 200
+        },
         "interrupt": [
             "福利_每日烙痕一抽_滑动烙痕卡池"
         ],

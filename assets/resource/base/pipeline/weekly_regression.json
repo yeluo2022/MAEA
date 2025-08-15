@@ -45,22 +45,8 @@
         "action": "Click",
         "post_wait_freezes": 200,
         "next": [
-            "周常_拟合回归_选择队伍",
             "周常_拟合回归_作战开始"
         ]
-    },
-    "周常_拟合回归_选择队伍": {
-        "recognition": "TemplateMatch",
-        "template": "队伍编辑/队伍编辑_选择队伍1__605_23_23_29__555_0_123_102.png",
-        "roi": [
-            585,
-            5,
-            235,
-            60
-        ],
-        "threshold": 0.9,
-        "action": "Click",
-        "next": "周常_拟合回归_作战开始"
     },
     "周常_拟合回归_作战开始": {
         "recognition": "OCR",

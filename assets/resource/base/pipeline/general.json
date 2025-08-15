@@ -21,6 +21,20 @@
         ],
         "action": "Click"
     },
+    "通用_点击空白区域关闭": {
+        "recognition": "OCR",
+        "expected": [
+            "点击空白区域"
+        ],
+        "threshold": 0.7,
+        "roi": [
+            543,
+            546,
+            188,
+            68
+        ],
+        "action": "Click"
+    },
     "通用_确认进入主界面": {
         "recognition": "TemplateMatch",
         "template": "主界面/主界面_功能菜单按钮__1132_662_104_32__1082_612_198_108.png",
@@ -30,7 +44,7 @@
             198,
             108
         ],
-        "threshold": 0.9
+        "threshold": 0.85
     },
     "通用_确认进入主界面_ColorMatch": {
         "recognition": "ColorMatch",
@@ -56,6 +70,7 @@
         "next": "通用_返回主界面_确认进入主界面_TemplateMatch",
         "interrupt": [
             "通用_点击屏幕继续",
+            "通用_点击空白区域关闭",
             "通用_返回二次确认退出",
             "通用_点击返回上一层按钮",
             "通用_点击返回主界面按钮",
@@ -72,13 +87,14 @@
     },
     "通用_返回主界面_确认进入主界面_TemplateMatch": {
         "recognition": "TemplateMatch",
-        "template": "主界面/主界面_功能菜单按钮__1132_662_104_32__1082_612_198_108.png",
+        "template": "主界面/主界面_功能菜单.png",
         "roi": [
             1082,
             612,
             198,
             108
         ],
+        "threshold": 0.85,
         "next": "通用_确认进入主界面_ColorMatch",
         "interrupt": [
             "奖励_日常周常_关闭任务界面",
