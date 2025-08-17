@@ -45,7 +45,7 @@
         "next": "启动_进入主界面"
     },
     "启动_进入主界面": {
-        "next": "通用_返回主界面_确认进入主界面_TemplateMatch",
+        "next": "通用_确认进入主界面_ColorMatch",
         "interrupt": [
             "通用_点击屏幕继续",
             "通用_庆典奖励领取",
@@ -70,9 +70,9 @@
             904,
             248
         ],
-        "pre_wait_freezes": 200,
+        "pre_wait_freezes": 100,
         "action": "Click",
-        "post_wait_freezes": 200,
+        "post_wait_freezes": 100,
         "next": [
             "关闭庆典奖励界面",
             "通用_庆典奖励领取"
@@ -89,8 +89,7 @@
             72
         ],
         "action": "Click",
-        "post_wait_freezes": 200,
-        "next": "启动_进入主界面"
+        "post_wait_freezes": 100
     },
     "启动_每日补给": {
         "recognition": "TemplateMatch",

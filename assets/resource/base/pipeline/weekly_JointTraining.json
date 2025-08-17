@@ -1,0 +1,225 @@
+{
+    "周常_联合训练场": {
+        "next": "周常_联合训练场_进入外勤作战中心",
+        "interrupt": [
+            "通用_返回主界面"
+        ]
+    },
+    "周常_联合训练场_进入外勤作战中心": {
+        "recognition": "OCR",
+        "expected": "外勤",
+        "roi": [
+            1120,
+            430,
+            155,
+            125
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "周常_联合训练场_进入联合训练场界面",
+            "周常_联合训练场_进入外勤作战中心"
+        ]
+    },
+    "周常_联合训练场_进入联合训练场界面": {
+        "recognition": "OCR",
+        "expected": "联合训练场",
+        "roi": [
+            644,
+            359,
+            290,
+            129
+        ],
+        "action": "Click",
+        "next": [
+            "周常_联合训练场_确认联合训练场是否完成",
+            "周常_联合训练场_进入联合训练场界面"
+        ]
+    },
+    "周常_联合训练场_确认联合训练场是否完成": {
+        "post_wait_freezes": 100,
+        "next": [
+            "周常_联合训练场_已完成",
+            "周常_联合训练场_未完成"
+        ]
+    },
+    "周常_联合训练场_已完成": {
+        "recognition": "TemplateMatch",
+        "template": "联合训练场/联合训练场_已完成.png",
+        "roi": [
+            202,
+            640,
+            309,
+            69
+        ],
+        "next": "通用_返回主界面"
+    },
+    "周常_联合训练场_未完成": {
+        "recognition": "OCR",
+        "expected": "前往决战",
+        "roi": [
+            778,
+            102,
+            437,
+            251
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200,
+        "next": "周常_联合训练场_难度05战斗",
+        "interrupt": "周常_联合训练场_难度上滑"
+    },
+    "周常_联合训练场_难度05战斗": {
+        "recognition": "OCR",
+        "expected": "05%",
+        "roi": [
+            971,
+            14,
+            299,
+            559
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "target": [
+                971,
+                14,
+                299,
+                559
+            ],
+            "time": 100
+        },
+        "next": "周常_联合训练场_前往决战"
+    },
+    "周常_联合训练场_难度上滑": {
+        "action": "Swipe",
+        "begin": [
+            1167,
+            89,
+            45,
+            38
+        ],
+        "end": [
+            1177,
+            257,
+            44,
+            40
+        ],
+        "post_wait_freezes": {
+            "target": [
+                971,
+                14,
+                299,
+                559
+            ],
+            "time": 100
+        }
+    },
+    "周常_联合训练场_前往决战": {
+        "recognition": "OCR",
+        "expected": "前往决战",
+        "roi": [
+            920,
+            632,
+            297,
+            76
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "周常_联合训练场_自动编队"
+        ]
+    },
+    "周常_联合训练场_自动编队": {
+        "recognition": "OCR",
+        "expected": "自动编队",
+        "roi": [
+            1020,
+            13,
+            128,
+            55
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": "周常_联合训练场_自动编队技能优先",
+        "interrupt": "周常_联合训练场_自动编队"
+    },
+    "周常_联合训练场_自动编队技能优先": {
+        "recognition": "OCR",
+        "expected": "技能优先",
+        "roi": [
+            497,
+            402,
+            282,
+            98
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": "周常_联合训练场_作战开始"
+    },
+    "周常_联合训练场_作战开始": {
+        "recognition": "OCR",
+        "expected": "作战开始",
+        "roi": [
+            930,
+            595,
+            245,
+            125
+        ],
+        "action": "Click",
+        "next": "周常_联合训练场_开始战斗"
+    },
+    "周常_联合训练场_开始战斗": {
+        "recognition": "OCR",
+        "expected": "开始战斗",
+        "roi": [
+            1055,
+            580,
+            215,
+            140
+        ],
+        "pre_wait_freezes": 200,
+        "action": "Click",
+        "next": "周常_联合训练场_确认开始战斗",
+        "interrupt": [
+            "周常_联合训练场_作战开始",
+            "周常_联合训练场_开始战斗"
+        ]
+    },
+    "周常_联合训练场_确认开始战斗": {
+        "recognition": "OCR",
+        "expected": "战术|终端",
+        "roi": [
+            13,
+            589,
+            202,
+            89
+        ],
+        "next": "周常_联合训练场_任务完成",
+        "timeout": 600000,
+        "rate_limit": 5000
+    },
+    "周常_联合训练场_任务完成": {
+        "recognition": "OCR",
+        "expected": "任务完成",
+        "roi": [
+            87,
+            109,
+            332,
+            134
+        ],
+        "action": "Click",
+        "next": "周常_联合训练场_战场信息变动"
+    },
+    "周常_联合训练场_战场信息变动": {
+        "recognition": "OCR",
+        "expected": "战场信息",
+        "action": "Click",
+        "target": [
+            590,
+            96,
+            50,
+            34
+        ],
+        "post_wait_freezes": 100,
+        "next": "周常_联合训练场_确认联合训练场是否完成"
+    }
+}
