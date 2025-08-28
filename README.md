@@ -10,7 +10,7 @@
 
 MAEA，基于全新架构的 白荆回廊 小助手。图像技术 + 模拟控制，解放双手！
 
-本项目在 **<https://github.com/moulai/MAEA>** 基础上进行修改维护，感谢@moulai 大佬
+本项目在 **<https://github.com/moulai/MaaAshEchoes>** 基础上进行修改维护，感谢@moulai 大佬
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
@@ -293,3 +293,4 @@ Windows 用户可以通过以下简单步骤安装和使用：
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
 本项目使用 **[MFAA](https://github.com/SweetSmellFox/MFAAvalonia)** 作为 GUI 界面！
+
